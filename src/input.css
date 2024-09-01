@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl;
+}
+
+header {
+  @apply w-full h-screen flex justify-center items-center;
+}
+
+nav {
+  @apply pt-2 flex justify-center;
+}
+
+section {
+  @apply py-5;
+}
+
+#profile,
+#experience,
+#contact {
+  @apply bg-black text-white;
+}
+
+.nav-container {
+  @apply border-2 border-black rounded-xl p-5;
+}
+
+.nav-title {
+  @apply text-center;
+}
+
+.inner-container {
+  @apply max-w-xl mx-auto;
+}
+
+.tool-section {
+  @apply my-4;
+}
+
+.education-list > li,
+.experience-list > li,
+.tools-list > li {
+  @apply my-2;
+}
