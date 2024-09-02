@@ -577,8 +577,12 @@ header {
 }
 
 nav {
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
   padding-top: 0.5rem;
 }
 
@@ -619,9 +623,35 @@ section {
   margin-bottom: 1rem;
 }
 
+.tool-section div:first-of-type {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.tools-container {
+  display: flex;
+  gap: 1.25rem;
+}
+
 .education-list > li,
 .experience-list > li,
 .tools-list > li {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.experience-list > li > div:first-of-type {
+  font-weight: 700;
+}
+
+.experience-list > li > div:nth-of-type(2) {
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.education-label {
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }

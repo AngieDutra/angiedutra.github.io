@@ -19,7 +19,7 @@ header {
 }
 
 nav {
-  @apply pt-2 flex justify-center;
+  @apply pt-2 flex justify-center border-t border-black mt-2;
 }
 
 section {
@@ -47,9 +47,27 @@ section {
 .tool-section {
   @apply my-4;
 }
+.tool-section div:first-of-type {
+  @apply text-gray-400;
+}
+
+.tools-container {
+  @apply flex gap-5;
+}
 
 .education-list > li,
 .experience-list > li,
 .tools-list > li {
   @apply my-2;
+}
+
+.experience-list > li > div:first-of-type {
+  @apply font-bold;
+}
+.experience-list > li > div:nth-of-type(2) {
+  @apply font-bold text-gray-400;
+}
+
+.education-label {
+  @apply text-gray-500 font-semibold;
 }
