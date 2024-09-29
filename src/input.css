@@ -11,19 +11,19 @@ h1 {
 }
 
 h2 {
-  @apply text-xl;
+  @apply text-xl border-b border-b-black py-2;
 }
 
 header {
-  @apply w-full flex justify-center items-center;
+  @apply fixed w-full flex justify-center items-center;
 }
 
 nav {
-  @apply w-full flex justify-between border-2 border-black;
+  @apply w-full flex justify-between border-2 border-black bg-white;
 }
 
 section {
-  @apply py-5;
+  @apply py-5 border border-black;
 }
 
 /* Section ids */
@@ -39,7 +39,9 @@ section {
 .nav-labels {
   @apply flex;
 }
-.nav-title,
+.nav-title {
+  @apply px-5 py-2;
+}
 .nav-logo {
   @apply border-r-2 border-r-black px-5 py-2;
 }
@@ -59,14 +61,16 @@ section {
 }
 
 .tool-section {
-  @apply my-4;
+  @apply my-4 px-4 py-2 border border-black;
 }
 .tool-section div:first-of-type {
-  @apply text-gray-400;
+  @apply text-gray-600;
 }
-
-.tools-container {
-  @apply flex gap-5;
+.tools-list {
+  @apply grid grid-cols-8 gap-2;
+}
+.tools-list li {
+  @apply border border-black flex justify-center;
 }
 
 .education-list > li,
@@ -78,10 +82,7 @@ section {
 .experience-list > li > div:first-of-type {
   @apply font-bold;
 }
-.experience-list > li > div:nth-of-type(2) {
-  @apply font-bold text-gray-400;
-}
 
 .education-label {
-  @apply text-gray-500 font-semibold;
+  @apply font-bold;
 }
