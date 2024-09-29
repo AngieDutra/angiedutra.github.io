@@ -15,33 +15,47 @@ h2 {
 }
 
 header {
-  @apply w-full h-screen flex justify-center items-center;
+  @apply w-full flex justify-center items-center;
 }
 
 nav {
-  @apply pt-2 flex justify-center border-t border-black mt-2;
+  @apply w-full flex justify-between border-2 border-black;
 }
 
 section {
   @apply py-5;
 }
 
-#profile,
-#experience,
-#contact {
-  @apply bg-black text-white;
+/* Section ids */
+#profile {
+  @apply min-h-7;
+}
+#profile .inner-container {
+  @apply flex items-center gap-20 my-20;
 }
 
-.nav-container {
-  @apply border-2 border-black rounded-xl p-5;
+/* Nav classes */
+.nav-options,
+.nav-labels {
+  @apply flex;
 }
-
+.nav-title,
+.nav-logo {
+  @apply border-r-2 border-r-black px-5 py-2;
+}
+.nav-options a {
+  @apply border-l-2 border-l-black py-2;
+}
+.nav-options a li {
+  @apply flex items-center h-full px-5;
+}
 .nav-title {
   @apply text-center;
 }
 
+/* Content classes */
 .inner-container {
-  @apply max-w-xl mx-auto;
+  @apply max-w-3xl mx-auto;
 }
 
 .tool-section {

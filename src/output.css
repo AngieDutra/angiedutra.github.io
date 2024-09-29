@@ -554,6 +554,18 @@ video {
   --tw-contain-style:  ;
 }
 
+.h-80 {
+  height: 20rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
+}
+
 * {
   scroll-behavior: smooth;
 }
@@ -570,20 +582,18 @@ h2 {
 
 header {
   display: flex;
-  height: 100vh;
   width: 100%;
   align-items: center;
   justify-content: center;
 }
 
 nav {
-  margin-top: 0.5rem;
   display: flex;
-  justify-content: center;
-  border-top-width: 1px;
+  width: 100%;
+  justify-content: space-between;
+  border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
 }
 
 section {
@@ -591,31 +601,64 @@ section {
   padding-bottom: 1.25rem;
 }
 
-#profile,
-#experience,
-#contact {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+/* Section ids */
+
+#profile {
+  min-height: 1.75rem;
 }
 
-.nav-container {
-  border-radius: 0.75rem;
-  border-width: 2px;
+#profile .inner-container {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Nav classes */
+
+.nav-options,
+.nav-labels {
+  display: flex;
+}
+
+.nav-title,
+.nav-logo {
+  border-right-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-  padding: 1.25rem;
+  border-right-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav-options a {
+  border-left-width: 2px;
+  --tw-border-opacity: 1;
+  border-left-color: rgb(0 0 0 / var(--tw-border-opacity));
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav-options a li {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .nav-title {
   text-align: center;
 }
 
+/* Content classes */
+
 .inner-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 36rem;
+  max-width: 48rem;
 }
 
 .tool-section {
