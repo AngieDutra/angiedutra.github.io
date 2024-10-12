@@ -22,8 +22,52 @@
           @apply fixed w-full flex justify-center items-center;
         }
 
-        nav {
-          @apply w-full flex justify-between border-2 border-black bg-white;
+        nav#desktop-nav {
+          @apply hidden lg:flex justify-between w-full border-2 border-black bg-white;
+          /* Nav classes */
+          .nav-options,
+          .nav-labels {
+            @apply flex;
+          }
+          .nav-title {
+            @apply px-5 py-2;
+          }
+          .nav-logo {
+            @apply border-r-2 border-r-black px-5 py-2;
+          }
+          .nav-options a {
+            @apply border-l-2 border-l-black py-2;
+          }
+          .nav-options a li {
+            @apply flex items-center h-full px-5;
+          }
+        }
+        nav#mobile-nav {
+          @apply w-full flex justify-between border-y-2 border-y-black bg-white lg:hidden;
+          .nav-labels {
+            @apply flex;
+          }
+          .nav-logo {
+            @apply border-black p-3;
+          }
+          #hamburger-btn {
+            @apply border-black border-l-2 p-3;
+          }
+          #mobile-nav-overlay {
+            @apply absolute top-0 left-0 w-screen h-screen bg-white flex-col justify-center items-center lg:hidden;
+            #close-btn {
+              @apply absolute top-3 right-3;
+            }
+            .nav-container {
+              @apply w-1/2 border-2 border-black rounded-lg flex flex-col justify-center items-center;
+            }
+            .nav-title {
+              @apply w-full text-center border-b-2 border-b-black py-3;
+            }
+            .nav-options {
+              @apply flex flex-col gap-3 my-4;
+            }
+          }
         }
 
         section {
@@ -36,27 +80,6 @@
         }
         #profile .inner-container {
           @apply flex flex-col lg:flex-row items-center gap-20 my-20;
-        }
-
-        /* Nav classes */
-        .nav-options,
-        .nav-labels {
-          @apply flex;
-        }
-        .nav-title {
-          @apply px-5 py-2;
-        }
-        .nav-logo {
-          @apply border-r-2 border-r-black px-5 py-2;
-        }
-        .nav-options a {
-          @apply border-l-2 border-l-black py-2;
-        }
-        .nav-options a li {
-          @apply flex items-center h-full px-5;
-        }
-        .nav-title {
-          @apply text-center;
         }
 
         /* Content classes */
@@ -96,7 +119,7 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="desktop-nav">
         <div class="nav-labels">
           <a href="#"><div class="nav-logo">A</div></a>
           <div class="nav-title">Angelica Dutra</div>
@@ -107,6 +130,25 @@
           <a href="#education"><li>Education</li></a>
           <a href="#contact"><li>Contact</li></a>
         </ul>
+      </nav>
+      <nav id="mobile-nav">
+        <div class="nav-labels">
+          <a href="#"><div class="nav-logo">A</div></a>
+          <div class="border-black border-l-2 p-3">Angelica Dutra</div>
+        </div>
+        <div id="hamburger-btn">Menu</div>
+        <div id="mobile-nav-overlay" class="hidden">
+          <div id="close-btn">CLOSE</div>
+          <div class="nav-container">
+            <div class="nav-title">Angelica Dutra</div>
+            <ul class="nav-options">
+              <a href="#experience"><li>Experience</li></a>
+              <a href="#tools"><li>Tools</li></a>
+              <a href="#education"><li>Education</li></a>
+              <a href="#contact"><li>Contact</li></a>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -281,5 +323,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="./hamburger.js"></script>
   </body>
 </html>
