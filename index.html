@@ -113,6 +113,13 @@
         .education-label {
           @apply font-bold;
         }
+
+        .contact-details {
+          @apply flex gap-3 flex-col lg:flex-row py-3;
+          .contact {
+            @apply flex items-center gap-2 border border-black p-2;
+          }
+        }
       }
     </style>
     <title>Angelica Dutra</title>
@@ -322,7 +329,47 @@
       <section id="contact">
         <div class="inner-container">
           <h2>Contact</h2>
-          <p>Mail: angiedutraa@gmail.com</p>
+          <div class="contact-details">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/angelica-dutra/"
+            >
+              <div class="contact">
+                <img
+                  class="w-auto h-5"
+                  src="./images/linkedin.svg"
+                  alt="linkedin"
+                />
+                <div>LinkedIn</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://github.com/AngieDutra">
+              <div class="contact">
+                <img
+                  class="w-auto h-5"
+                  src="./images/github.svg"
+                  alt="github"
+                />
+                <div>GitHub</div>
+              </div>
+            </a>
+            <a href="mailto:angiedutraa@gmail.com">
+              <div class="contact">
+                <img class="w-auto h-5" src="./images/mail.svg" alt="gmail" />
+                <div>angiedutraa@gmail.com</div>
+              </div>
+            </a>
+            <a target="_blank" href="https://x.com/angiedutraa">
+              <div class="contact">
+                <img
+                  class="w-auto h-5"
+                  src="./images/x.svg"
+                  alt="X social media logo"
+                />
+                <div>X / Twitter</div>
+              </div>
+            </a>
+          </div>
         </div>
       </section>
     </main>
