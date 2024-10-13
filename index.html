@@ -1,14 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="./output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        * {
+          @apply scroll-smooth;
+        }
+
+        h1 {
+          @apply text-2xl;
+        }
+
+        h2 {
+          @apply text-xl border-b border-b-black py-2;
+        }
+
+        header {
+          @apply fixed w-full flex justify-center items-center;
+        }
+
+        nav#desktop-nav {
+          @apply hidden lg:flex justify-between w-full border-2 border-black bg-white;
+          /* Nav classes */
+          .nav-options,
+          .nav-labels {
+            @apply flex;
+          }
+          .nav-title {
+            @apply px-5 py-2;
+          }
+          .nav-logo {
+            @apply border-r-2 border-r-black px-5 py-2;
+          }
+          .nav-options a {
+            @apply border-l-2 border-l-black py-2;
+          }
+          .nav-options a li {
+            @apply flex items-center h-full px-5;
+          }
+        }
+        nav#mobile-nav {
+          @apply w-full flex justify-between border-y-2 border-y-black bg-white lg:hidden;
+          .nav-labels {
+            @apply flex;
+          }
+          .nav-logo {
+            @apply border-black p-3;
+          }
+          #hamburger-btn {
+            @apply border-black border-l-2 p-3;
+          }
+          #mobile-nav-overlay {
+            @apply absolute top-0 left-0 w-screen h-screen bg-white flex-col justify-center items-center lg:hidden;
+            #close-btn {
+              @apply absolute top-3 right-3;
+            }
+            .nav-container {
+              @apply w-1/2 border-2 border-black rounded-lg flex flex-col justify-center items-center;
+            }
+            .nav-title {
+              @apply w-full text-center border-b-2 border-b-black py-3;
+            }
+            .nav-options {
+              @apply flex flex-col gap-3 my-4;
+            }
+          }
+        }
+
+        section {
+          @apply py-5 border border-black scroll-m-10 lg:scroll-m-5;
+        }
+
+        /* Section ids */
+        #profile {
+          @apply min-h-7;
+        }
+        #profile .inner-container {
+          @apply flex flex-col lg:flex-row items-center gap-20 my-20;
+        }
+
+        /* Content classes */
+        .inner-container {
+          @apply max-w-3xl mx-auto px-5;
+        }
+
+        .tool-section {
+          @apply my-4 px-4 py-2 border border-black;
+        }
+        .tool-section div:first-of-type {
+          @apply text-gray-600;
+        }
+        .tools-list {
+          @apply grid grid-cols-3 lg:grid-cols-8 gap-2;
+        }
+        .tools-list li {
+          @apply border border-black flex justify-center;
+        }
+
+        .education-list > li,
+        .experience-list > li,
+        .tools-list > li {
+          @apply my-2;
+        }
+
+        .experience-list > li > div:first-of-type {
+          @apply font-bold;
+        }
+
+        .education-label {
+          @apply font-bold;
+        }
+      }
+    </style>
     <title>Angelica Dutra</title>
   </head>
   <body>
     <header>
-      <nav>
+      <nav id="desktop-nav">
         <div class="nav-labels">
           <a href="#"><div class="nav-logo">A</div></a>
           <div class="nav-title">Angelica Dutra</div>
@@ -20,20 +131,44 @@
           <a href="#contact"><li>Contact</li></a>
         </ul>
       </nav>
+      <nav id="mobile-nav">
+        <div class="nav-labels">
+          <a href="#"><div class="nav-logo">A</div></a>
+          <div class="border-black border-l-2 p-3">Angelica Dutra</div>
+        </div>
+        <img
+          id="hamburger-btn"
+          src="./images/hamburger.svg"
+          alt="hamburger button"
+        />
+        <div id="mobile-nav-overlay" class="hidden">
+          <img id="close-btn" src="./images/close.svg" alt="close menu" />
+          <div class="nav-container">
+            <div class="nav-title">Angelica Dutra</div>
+            <ul class="nav-options">
+              <a href="#experience"><li>Experience</li></a>
+              <a href="#tools"><li>Tools</li></a>
+              <a href="#education"><li>Education</li></a>
+              <a href="#contact"><li>Contact</li></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
       <section id="profile">
         <div class="inner-container">
-          <img class="w-80 h-80" src="./images/logo.png" />
+          <img
+            class="w-60 h-auto"
+            src="./images/logo.png"
+            alt="Self Portrait"
+          />
           <div>
             <h1>Hi! I'm An</h1>
-            <p class="pt-5">
-              With 3 years of experience in multimedia design and
-              implementation, I'm committed to delivering quality work. I always
-              strive to find practical solutions to challenges and enjoy the
-              process of it. I'm eager to find opportunities where I can combine
-              my creativity, development skills and collaborate with other
-              professionals.
+            <p class="pt-2">
+              I have 3 years of experience in web and video game programming. I
+              am excited to find opportunities where I can continue expanding my
+              knowledge and collaborate with other professionals in the field.
             </p>
           </div>
         </div>
@@ -192,5 +327,6 @@
       </section>
     </main>
     <footer></footer>
+    <script src="./hamburger.js"></script>
   </body>
 </html>
