@@ -107,16 +107,22 @@
 
         .experience-list {
           li {
-            @apply my-5;
+            @apply my-7;
           }
           li > div:first-of-type {
-            @apply font-bold;
+            @apply font-bold text-lg;
+          }
+          .experience-detail-content > div:first-of-type {
+            @apply mt-1 mb-5 leading-snug lg:leading-normal;
           }
           .experience-project {
-            @apply border border-black py-3 px-5 my-3;
+            @apply border border-black py-3 px-4 lg:px-5 my-4;
           }
           .experience-project > div:first-of-type {
-            @apply font-bold pb-2 border-b border-b-black mb-2;
+            @apply font-semibold leading-tight lg:leading-normal flex justify-between gap-5;
+          }
+          .experience-drop-info {
+            @apply pt-2 border-t border-t-black mt-3;
           }
           .experience-dev-stack {
             @apply mt-2 text-gray-500;
@@ -222,118 +228,203 @@
                     extension for Google Chrome.
                   </div>
                   <div class="experience-project">
-                    <div>Oncology Hospital Management System</div>
                     <div>
-                      This project aimed to streamline how the oncology team
-                      handled patient information and medical appointments
-                      through a web-based system.
+                      <div>Web for oncology hospital management system</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Design and Development takeaways: Designing an intuitive
-                      UI/UX for hospital staff who were not very tech-savvy was
-                      key. I focused on creating a simple, user-friendly
-                      interface while collaborating closely with the team to
-                      ensure features were easy to use and scale as the system
-                      grew. I enjoyed working alongside the backend team and
-                      learning through a constant feedback loop with users.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Elixir, HTML, CSS, SCSS, and JavaScript.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        This project aimed to streamline how the oncology team
+                        handled patient information and medical appointments
+                        through a web-based system.
+                      </div>
+                      <div>
+                        Design and Development takeaways: Designing an intuitive
+                        UI/UX for hospital staff who were not very tech-savvy
+                        was key. I focused on creating a simple, user-friendly
+                        interface while collaborating closely with the team to
+                        ensure features were easy to use and scale as the system
+                        grew. I enjoyed working alongside the backend team and
+                        learning through a constant feedback loop with users.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Elixir, HTML, CSS, SCSS, and JavaScript.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>Web for a pharmaceutical brand</div>
-                    <div>This web showcased the brand and it's products.</div>
                     <div>
-                      Design and Development takeaways: I had total liberty in
-                      design and development complexity as long as the client
-                      approved so. Therefore, I could experiment with a lot of
-                      animation ideas I had in mind and wanted to implement
-                      which took the brand to a new level. Also, as I was the
-                      code owner of this project, I got familiarized with
-                      attending requests from the client directly and
-                      effectively.
+                      <div>Web for a pharmaceutical brand</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: HTML, CSS, Tailwind and JavaScript.
+                    <div class="experience-drop-info hidden">
+                      <div>This web showcased the brand and it's products.</div>
+                      <div>
+                        Design and Development takeaways: I had total liberty in
+                        design and development complexity as long as the client
+                        approved so. Therefore, I could experiment with a lot of
+                        animation ideas I had in mind and wanted to implement
+                        which took the brand to a new level. Also, as I was the
+                        code owner of this project, I got familiarized with
+                        attending requests from the client directly and
+                        effectively.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: HTML, CSS, Tailwind and JavaScript.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>Web app for minor league soccer management</div>
                     <div>
-                      This web provided a system to improve the league's players
-                      management and store of data while promoting healthy
-                      habits for the players.
+                      <div>Web for minor league soccer management system</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Development takeaways: The web required good ux achieved
-                      as a designer and front end dev. Some great additions were
-                      the player's charts and stats which added a layer of
-                      complexity new at that time for me.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Elixir, HTML, CSS, Tailwind and JavaScript.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        This web provided a system to improve the league's
+                        players management and store of data while promoting
+                        healthy habits for the players.
+                      </div>
+                      <div>
+                        Development takeaways: The web required good ux achieved
+                        as a designer and front end dev. Some great additions
+                        were the player's charts and stats which added a layer
+                        of complexity new at that time for me.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Elixir, HTML, CSS, Tailwind and JavaScript.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>Web3 Platforms for various Clients</div>
                     <div>
-                      These platforms provide crucial data like real-time market
-                      prices, trading volumes, blockchain transactions, token
-                      distribution and on-chain analytics. They also offer
-                      interactive charts and historical data trends.
+                      <div>Web3 Platforms for various Clients</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Design and Development takeaways: The main challenge was
-                      to create a familiar UX, as users of such platforms expect
-                      information to be easily accessible and intuitive. While
-                      innovation in layout was limited, I had fun experimenting
-                      with the color scheme, elements design and branding.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Elixir, HTML, CSS, JavaScript, and Tailwind
-                      CSS.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        These platforms provide crucial data like real-time
+                        market prices, trading volumes, blockchain transactions,
+                        token distribution and on-chain analytics. They also
+                        offer interactive charts and historical data trends.
+                      </div>
+                      <div>
+                        Design and Development takeaways: The main challenge was
+                        to create a familiar UX, as users of such platforms
+                        expect information to be easily accessible and
+                        intuitive. While innovation in layout was limited, I had
+                        fun experimenting with the color scheme, elements design
+                        and branding.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Elixir, HTML, CSS, JavaScript, and Tailwind
+                        CSS.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>Web3 Roulette Game</div>
                     <div>
-                      A Web3-based roulette game that integrated Zero Knowledge
-                      Proofs (ZKP). This was my first experience working in the
-                      gaming industry.
+                      <div>Web3 Roulette Game</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Design and Development takeaways: I had to deep-dive into
-                      researching game mechanics to better understand user
-                      behavior and how to reflect that through the UI/UX. This
-                      project was a great learning experience, especially when
-                      it came to collaboration, shared knowledge and
-                      understanding the importance of good documentation.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Elixir, ReScript, TypeScript, React, HTML, CSS,
-                      JavaScript, Tailwind, and APIs.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        A Web3-based roulette game that integrated Zero
+                        Knowledge Proofs (ZKP). This was my first experience
+                        working in the gaming industry.
+                      </div>
+                      <div>
+                        Design and Development takeaways: I had to deep-dive
+                        into researching game mechanics to better understand
+                        user behavior and how to reflect that through the UI/UX.
+                        This project was a great learning experience, especially
+                        when it came to collaboration, shared knowledge and
+                        understanding the importance of good documentation.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Elixir, ReScript, TypeScript, React, HTML,
+                        CSS, JavaScript, Tailwind, and APIs.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>Google Chrome Wallet Extension</div>
                     <div>
-                      I developed a wallet extension available on the Google
-                      Chrome Store, designed to connect crypto wallets and
-                      facilitate blockchain transactions.
+                      <div>Google Chrome Wallet Extension</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Design and Development takeaways: My first time building a
-                      wallet extension, I had to research existing conventions
-                      to ensure users could easily navigate the interface. While
-                      the functionality followed established patterns, I had fun
-                      working on the visual style and user experience. Testing
-                      and implementing the extension was a challenging but
-                      rewarding process.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev Stack: Elixir, ReScript, TypeScript, React, HTML, CSS,
-                      JavaScript, and APIs.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        I developed a wallet extension available on the Google
+                        Chrome Store, designed to connect crypto wallets and
+                        facilitate blockchain transactions.
+                      </div>
+                      <div>
+                        Design and Development takeaways: My first time building
+                        a wallet extension, I had to research existing
+                        conventions to ensure users could easily navigate the
+                        interface. While the functionality followed established
+                        patterns, I had fun working on the visual style and user
+                        experience. Testing and implementing the extension was a
+                        challenging but rewarding process.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev Stack: Elixir, ReScript, TypeScript, React, HTML,
+                        CSS, JavaScript, and APIs.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -346,41 +437,71 @@
                     game.
                   </div>
                   <div class="experience-project">
-                    <div>3D Game – Unity</div>
                     <div>
-                      This mobile PvP game features six characters, player
-                      quests, currency rewards and real-time online multiplayer.
+                      <div>3D Game – Unity</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Development takeaways: I gained valuable experience in
-                      VFX, particle systems and 3D asset import and handle. This
-                      project introduced me to backend integration, advancing my
-                      understanding of front-back connections. Coding in C# had
-                      similarities to Processing, a language I had previously
-                      learned, which made the transition smoother and enjoyable.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Unity and C#.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        This mobile PvP game features six characters, player
+                        quests, currency rewards and real-time online
+                        multiplayer.
+                      </div>
+                      <div>
+                        Development takeaways: I gained valuable experience in
+                        VFX, particle systems and 3D asset import and handle.
+                        This project introduced me to backend integration,
+                        advancing my understanding of front-back connections.
+                        Coding in C# had similarities to Processing, a language
+                        I had previously learned, which made the transition
+                        smoother and enjoyable.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Unity and C#.
+                      </div>
                     </div>
                   </div>
                   <div class="experience-project">
-                    <div>2D Game – Unity</div>
                     <div>
-                      Initially launched as a platformer, this game evolved into
-                      a metroidvania to better meet the company goals.
+                      <div>2D Game – Unity</div>
+                      <img
+                        class="show w-5 h-auto"
+                        src="./images/show-circle.svg"
+                        alt="open dropdown"
+                      />
+                      <img
+                        class="hide hidden w-5 h-auto"
+                        src="./images/hide-circle.svg"
+                        alt="close dropdown"
+                      />
                     </div>
-                    <div>
-                      Development takeaways: This project offered a great chance
-                      to deepen my game development skills. Working with 2D
-                      assets and a straightforward single-player concept allowed
-                      me to focus more on the C# code and animation without the
-                      complexities of backend integration. I enjoyed
-                      experimenting with shaders and particle systems, which
-                      aligned well with my interests in both development and
-                      user experience design.
-                    </div>
-                    <div class="experience-dev-stack">
-                      Dev stack: Unity and C#.
+                    <div class="experience-drop-info hidden">
+                      <div>
+                        Initially launched as a platformer, this game evolved
+                        into a metroidvania to better meet the company goals.
+                      </div>
+                      <div>
+                        Development takeaways: This project offered a great
+                        chance to deepen my game development skills. Working
+                        with 2D assets and a straightforward single-player
+                        concept allowed me to focus more on the C# code and
+                        animation without the complexities of backend
+                        integration. I enjoyed experimenting with shaders and
+                        particle systems, which aligned well with my interests
+                        in both development and user experience design.
+                      </div>
+                      <div class="experience-dev-stack">
+                        Dev stack: Unity and C#.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -549,6 +670,7 @@
       </section>
     </main>
     <footer></footer>
-    <script src="./hamburger.js"></script>
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/toggleElements.js"></script>
   </body>
 </html>
