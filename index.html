@@ -15,7 +15,7 @@
         }
 
         h2 {
-          @apply text-xl border-b border-b-black py-2;
+          @apply text-xl border-b border-b-black py-2 mb-5;
         }
 
         header {
@@ -71,7 +71,7 @@
         }
 
         section {
-          @apply py-5 border border-black scroll-m-10 lg:scroll-m-5;
+          @apply py-8 border border-black scroll-m-10 lg:scroll-m-5;
         }
 
         /* Section ids */
@@ -87,36 +87,19 @@
           @apply max-w-3xl mx-auto px-5;
         }
 
-        .tool-section {
-          @apply my-4 px-4 py-2 border border-black;
-        }
-        .tool-section div:first-of-type {
-          @apply text-gray-600;
-        }
-        .tools-list {
-          @apply grid grid-cols-3 lg:grid-cols-8 gap-2;
-        }
-        .tools-list li {
-          @apply border border-black flex justify-center;
-        }
-
-        .education-list > li,
-        .tools-list > li {
-          @apply my-2;
-        }
-
         .experience-list {
+          @apply flex flex-col gap-4;
           li {
-            @apply my-7;
+            @apply flex flex-col gap-1;
           }
           li > div:first-of-type {
             @apply font-bold text-lg;
           }
           .experience-detail-content > div:first-of-type {
-            @apply mt-1 mb-5 leading-snug lg:leading-normal;
+            @apply leading-snug lg:leading-normal;
           }
           .experience-project {
-            @apply border border-black py-3 px-4 lg:px-5 my-4;
+            @apply border border-black py-3 px-4 lg:px-5 my-3;
           }
           .experience-project > div:first-of-type {
             @apply font-semibold leading-tight lg:leading-normal flex justify-between gap-5;
@@ -129,12 +112,31 @@
           }
         }
 
+        .tools-container {
+          @apply flex flex-col gap-3;
+          .tool-section {
+            @apply px-4 py-2 border border-black;
+            .tools-list {
+              @apply grid grid-cols-3 lg:grid-cols-6 gap-x-2.5 gap-y-3 py-2;
+            }
+            .tools-list li {
+              @apply border border-black flex justify-center py-1;
+            }
+            div:first-of-type {
+              @apply text-gray-500;
+            }
+          }
+        }
+
         .education-label {
           @apply font-bold;
         }
+        .education-list {
+          @apply flex flex-col gap-3;
+        }
 
         .contact-details {
-          @apply flex gap-3 flex-col lg:flex-row py-3;
+          @apply flex gap-3 flex-col lg:flex-row;
           .contact {
             @apply flex items-center gap-2 border border-black p-2;
           }
@@ -538,6 +540,7 @@
                 <li>JavaScript</li>
                 <li>Node.js</li>
                 <li>React.js</li>
+                <li>ReScript</li>
                 <li>TypeScript</li>
                 <li>Git</li>
                 <li>GitHub</li>
