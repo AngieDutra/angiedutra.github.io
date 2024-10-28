@@ -77,14 +77,14 @@
         /* Section ids */
         #profile {
           @apply min-h-7;
-        }
-        #profile .inner-container {
-          @apply flex flex-col lg:flex-row items-center gap-20 my-20;
+          .inner-container {
+            @apply flex flex-col md:flex-row items-center gap-10 mt-14 lg:my-20;
+          }
         }
 
         /* Content classes */
         .inner-container {
-          @apply max-w-3xl mx-auto px-5;
+          @apply max-w-2xl lg:max-w-3xl mx-auto px-5;
         }
 
         .experience-list {
@@ -117,7 +117,7 @@
           .tool-section {
             @apply px-4 py-2 border border-black;
             .tools-list {
-              @apply grid grid-cols-3 lg:grid-cols-6 gap-x-2.5 gap-y-3 py-2;
+              @apply grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-2.5 gap-y-3 py-2;
             }
             .tools-list li {
               @apply border border-black flex justify-center py-1;
@@ -136,7 +136,7 @@
         }
 
         .contact-details {
-          @apply flex gap-3 flex-col lg:flex-row;
+          @apply flex gap-3 flex-col md:flex-row;
           .contact {
             @apply flex items-center gap-2 border border-black p-2;
           }
@@ -188,16 +188,15 @@
         <div class="inner-container">
           <img
             class="w-60 h-auto"
-            src="./images/logo.png"
+            src="./images/portrait.png"
             alt="Self Portrait"
           />
           <div>
             <h1>Hi! I'm An</h1>
             <p class="pt-2">
-              I'm a web and game developer. I'm also a designer with an
-              illustration hobby. I am excited to find opportunities where I can
-              continue expanding my knowledge and collaborate with other
-              professionals.
+              As a Web and Game Developer, Designer, and Illustration
+              enthusiast, I’m eager to explore opportunities to expand my
+              expertise and work with fellow professionals across the industry.
             </p>
           </div>
         </div>
