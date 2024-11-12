@@ -7,7 +7,11 @@
     <style type="text/tailwindcss">
       @layer utilities {
         * {
-          @apply scroll-smooth;
+          @apply scroll-smooth text-black dark:text-white;
+        }
+
+        body {
+          @apply bg-white dark:bg-[#03080c];
         }
 
         h1 {
@@ -15,15 +19,15 @@
         }
 
         h2 {
-          @apply text-xl border-b border-b-black py-2 mb-5;
+          @apply text-xl border-b border-b-black dark:border-b-gray-700 py-2 mb-5;
         }
 
         header {
-          @apply fixed w-full flex justify-center items-center;
+          @apply fixed w-full flex justify-center items-center bg-white dark:bg-[#03080c];
         }
 
         nav#desktop-nav {
-          @apply hidden lg:flex justify-between w-full border-2 border-black bg-white;
+          @apply hidden lg:flex justify-between w-full border-2 border-black dark:border-gray-700;
           /* Nav classes */
           .nav-options {
             @apply flex;
@@ -35,42 +39,54 @@
             @apply px-5 py-2;
           }
           .nav-logo {
-            @apply border-r-2 border-r-black px-5 py-2;
+            @apply border-r-2 border-r-black dark:border-r-gray-700 px-5 py-2;
           }
           .nav-options a {
-            @apply border-l-2 border-l-black py-2;
+            @apply border-l-2 border-l-black dark:border-l-gray-700 py-2;
           }
           .nav-options a li {
             @apply flex items-center h-full px-5;
           }
+          .mode-toggle {
+            @apply w-10 flex justify-center items-center border-l-2 border-l-black dark:border-l-gray-700 bg-zinc-300 dark:bg-gray-900;
+            img {
+              @apply w-5 h-auto;
+            }
+          }
         }
         nav#mobile-nav {
-          @apply w-full flex justify-between border-y-2 border-y-black bg-white lg:hidden;
+          @apply w-full flex justify-between border-y-2 border-y-black dark:border-y-white dark:border-y-gray-700 bg-white dark:bg-[#03080c] lg:hidden;
           .nav-labels {
             @apply flex;
           }
           .nav-logo {
-            @apply border-black p-3;
+            @apply border-black dark:border-gray-700  p-3;
           }
-          #hamburger-btn {
-            @apply border-black border-l-2 p-3;
+          .hamburger-btn {
+            @apply border-black dark:border-gray-700 border-l-2 p-3;
           }
           #mobile-nav-overlay {
-            @apply absolute top-0 left-0 p-4 md:p-10 w-screen h-screen bg-white flex-col lg:hidden;
-            #close-btn {
+            @apply absolute top-0 left-0 p-4 md:p-10 w-screen h-screen bg-white dark:bg-[#03080c] flex-col lg:hidden;
+            .close-btn {
               @apply absolute top-8 right-7 md:top-14 md:right-14;
             }
             .nav-container {
-              @apply w-full h-full border-2 border-black flex flex-col;
+              @apply w-full h-full border-2 border-black dark:border-gray-700 flex flex-col;
             }
             .nav-title {
-              @apply w-full border-b-2 border-b-black py-3 px-5 md:text-xl;
+              @apply w-full border-b-2 border-b-black dark:border-b-gray-700 py-3 px-5 md:text-xl;
             }
             .nav-options {
               @apply flex flex-col gap-4 my-6 md:text-lg;
             }
             li {
-              @apply mx-5 px-5 py-2 border border-black;
+              @apply mx-5 px-5 py-2 border border-black dark:border-gray-700;
+            }
+            .mode-toggle {
+              @apply flex justify-center items-center bg-zinc-300 dark:bg-gray-900;
+              img {
+                @apply w-5 h-auto;
+              }
             }
           }
         }
@@ -104,13 +120,13 @@
             @apply leading-snug lg:leading-normal;
           }
           .experience-project {
-            @apply border border-black py-3 px-4 lg:px-5 my-3;
+            @apply border border-black dark:border-gray-700 py-3 px-4 lg:px-5 my-3;
           }
           .experience-project > div:first-of-type {
             @apply font-semibold leading-tight lg:leading-normal flex justify-between gap-5;
           }
           .experience-drop-info {
-            @apply pt-2 border-t border-t-black mt-3;
+            @apply pt-2 border-t border-t-black dark:border-t-gray-700 mt-3;
           }
           .experience-dev-stack {
             @apply mt-2 text-gray-500;
@@ -120,12 +136,12 @@
         .tools-container {
           @apply flex flex-col gap-3;
           .tool-section {
-            @apply px-4 py-2 border border-black;
+            @apply px-4 py-2 border border-black dark:border-gray-700;
             .tools-list {
               @apply grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-2.5 gap-y-3 py-2;
             }
             .tools-list li {
-              @apply border border-black flex justify-center py-1;
+              @apply border border-black dark:border-gray-700 flex justify-center py-1;
             }
             div:first-of-type {
               @apply text-gray-500;
@@ -143,7 +159,16 @@
         .contact-details {
           @apply flex gap-3 flex-col md:flex-row;
           .contact {
-            @apply flex items-center gap-2 border border-black p-2;
+            @apply flex items-center gap-2 border border-black dark:border-gray-700 p-2;
+            img {
+              @apply w-auto h-5;
+            }
+            img:first-of-type {
+              @apply block dark:hidden;
+            }
+            img:last-of-type {
+              @apply hidden dark:block;
+            }
           }
         }
       }
@@ -164,20 +189,48 @@
           <a href="#tools"><li>Tools</li></a>
           <a href="#education"><li>Education</li></a>
           <a href="#contact"><li>Contact</li></a>
+          <li class="mode-toggle">
+            <img
+              class="light hidden dark:inline"
+              src="./images/mode-light.svg"
+              alt="light icon"
+            />
+            <img
+              class="dark dark:hidden"
+              src="./images/mode-dark.svg"
+              alt="light icon"
+            />
+          </li>
         </ul>
       </nav>
       <nav id="mobile-nav">
         <div class="nav-labels">
           <a href="#"><div class="nav-logo">A</div></a>
-          <div class="border-black border-l-2 p-3">Angelica Dutra</div>
+          <div class="border-black dark:border-gray-700 border-l-2 p-3">
+            Angelica Dutra
+          </div>
         </div>
         <img
-          id="hamburger-btn"
+          class="hamburger-btn block dark:hidden"
           src="./images/hamburger.svg"
           alt="hamburger button"
         />
+        <img
+          class="hamburger-btn hidden dark:block"
+          src="./images/hamburger-light.svg"
+          alt="hamburger button"
+        />
         <div id="mobile-nav-overlay" class="hidden">
-          <img id="close-btn" src="./images/close.svg" alt="close menu" />
+          <img
+            class="close-btn block dark:hidden"
+            src="./images/close.svg"
+            alt="close menu"
+          />
+          <img
+            class="close-btn hidden dark:block"
+            src="./images/close-light.svg"
+            alt="close menu"
+          />
           <div class="nav-container">
             <div class="nav-title">Angelica Dutra</div>
             <ul class="nav-options">
@@ -186,6 +239,18 @@
               <a href="#tools"><li>Tools</li></a>
               <a href="#education"><li>Education</li></a>
               <a href="#contact"><li>Contact</li></a>
+              <li class="mode-toggle">
+                <img
+                  class="light hidden dark:inline"
+                  src="./images/mode-light.svg"
+                  alt="light icon"
+                />
+                <img
+                  class="dark dark:hidden"
+                  src="./images/mode-dark.svg"
+                  alt="light icon"
+                />
+              </li>
             </ul>
           </div>
         </div>
@@ -643,35 +708,31 @@
               href="https://www.linkedin.com/in/angelica-dutra/"
             >
               <div class="contact">
-                <img
-                  class="w-auto h-5"
-                  src="./images/linkedin.svg"
-                  alt="linkedin"
-                />
+                <img src="./images/linkedin.svg" alt="linkedin" />
+                <img src="./images/linkedin-light.svg" alt="linkedin" />
                 <div>LinkedIn</div>
               </div>
             </a>
             <a target="_blank" href="https://github.com/AngieDutra">
               <div class="contact">
-                <img
-                  class="w-auto h-5"
-                  src="./images/github.svg"
-                  alt="github"
-                />
+                <img class="" src="./images/github.svg" alt="github" />
+                <img class="" src="./images/github-light.svg" alt="github" />
                 <div>GitHub</div>
               </div>
             </a>
             <a href="mailto:angiedutraa@gmail.com">
               <div class="contact">
-                <img class="w-auto h-5" src="./images/mail.svg" alt="gmail" />
+                <img class="" src="./images/mail.svg" alt="gmail" />
+                <img class="" src="./images/mail-light.svg" alt="gmail" />
                 <div>angiedutraa@gmail.com</div>
               </div>
             </a>
             <a target="_blank" href="https://x.com/angiedutraa">
               <div class="contact">
+                <img class="" src="./images/x.svg" alt="X social media logo" />
                 <img
-                  class="w-auto h-5"
-                  src="./images/x.svg"
+                  class=""
+                  src="./images/x-light.svg"
                   alt="X social media logo"
                 />
                 <div>X / Twitter</div>
@@ -681,8 +742,8 @@
         </div>
       </section>
     </main>
-    <footer></footer>
     <script src="./scripts/hamburger.js"></script>
     <script src="./scripts/toggleElements.js"></script>
+    <script src="./scripts/colorModeToggle.js"></script>
   </body>
 </html>
