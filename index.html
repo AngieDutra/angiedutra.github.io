@@ -25,9 +25,11 @@
         nav#desktop-nav {
           @apply hidden lg:flex justify-between w-full border-2 border-black bg-white;
           /* Nav classes */
-          .nav-options,
-          .nav-labels {
+          .nav-options {
             @apply flex;
+          }
+          .nav-labels {
+            @apply flex w-full;
           }
           .nav-title {
             @apply px-5 py-2;
@@ -54,29 +56,32 @@
             @apply border-black border-l-2 p-3;
           }
           #mobile-nav-overlay {
-            @apply absolute top-0 left-0 w-screen h-screen bg-white flex-col justify-center items-center lg:hidden;
+            @apply absolute top-0 left-0 p-4 md:p-10 w-screen h-screen bg-white flex-col lg:hidden;
             #close-btn {
-              @apply absolute top-3 right-3;
+              @apply absolute top-8 right-7 md:top-14 md:right-14;
             }
             .nav-container {
-              @apply w-1/2 border-2 border-black rounded-lg flex flex-col justify-center items-center;
+              @apply w-full h-full border-2 border-black flex flex-col;
             }
             .nav-title {
-              @apply w-full text-center border-b-2 border-b-black py-3;
+              @apply w-full border-b-2 border-b-black py-3 px-5 md:text-xl;
             }
             .nav-options {
-              @apply flex flex-col gap-3 my-4;
+              @apply flex flex-col gap-4 my-6 md:text-lg;
+            }
+            li {
+              @apply mx-5 px-5 py-2 border border-black;
             }
           }
         }
 
         section {
-          @apply py-8 border border-black scroll-m-10 lg:scroll-m-5;
+          @apply my-8 scroll-m-14 lg:scroll-m-5;
         }
 
         /* Section ids */
         #profile {
-          @apply min-h-7;
+          @apply min-h-7 pt-8 !mt-0;
           .inner-container {
             @apply flex flex-col md:flex-row items-center gap-10 mt-14 lg:my-20;
           }
@@ -150,7 +155,9 @@
       <nav id="desktop-nav">
         <div class="nav-labels">
           <a href="#"><div class="nav-logo">A</div></a>
-          <div class="nav-title">Angelica Dutra</div>
+          <a href="#" class="flex-grow">
+            <div class="nav-title">Angelica Dutra</div>
+          </a>
         </div>
         <ul class="nav-options">
           <a href="#experience"><li>Experience</li></a>
@@ -174,6 +181,7 @@
           <div class="nav-container">
             <div class="nav-title">Angelica Dutra</div>
             <ul class="nav-options">
+              <a href="#"><li>Home</li></a>
               <a href="#experience"><li>Experience</li></a>
               <a href="#tools"><li>Tools</li></a>
               <a href="#education"><li>Education</li></a>
