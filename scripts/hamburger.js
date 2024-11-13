@@ -1,31 +1,10 @@
-const menuBtns = document.querySelectorAll(".hamburger-btn");
-const closeBtns = document.querySelectorAll(".close-btn");
-const navOptions = document.querySelectorAll(".nav-options a");
-const navOverlay = document.getElementById("mobile-nav-overlay");
+const setOverlayStyles = (overlay) => {
+  overlay.classList.toggle("hidden");
+  overlay.classList.toggle("flex");
+};
 
-menuBtns.forEach((button) => {
-  button.addEventListener("click", () => {
-    navOverlay.classList.toggle("hidden");
-    navOverlay.classList.toggle("flex");
-    toggleScrollOnNav();
-  });
-});
-closeBtns.forEach((button) => {
-  button.addEventListener("click", () => {
-    navOverlay.classList.toggle("hidden");
-    navOverlay.classList.toggle("flex");
-    toggleScrollOnNav();
-  });
-});
-navOptions.forEach((option) => {
-  option.addEventListener("click", () => {
-    navOverlay.classList.toggle("hidden");
-    navOverlay.classList.toggle("flex");
-    toggleScrollOnNav();
-  });
-});
-
-function toggleScrollOnNav() {
+// Prevent scrolling the web while the nav overlay is open
+const toggleBodyScroll = () => {
   const body = document.querySelector("body");
   const isNavOpen = navOverlay.classList.contains("flex");
   if (isNavOpen) {
@@ -33,4 +12,31 @@ function toggleScrollOnNav() {
   } else {
     body.style.overflow = "visible";
   }
-}
+};
+
+// Get buttons
+const menuButtons = document.querySelectorAll(".hamburger-btn");
+const closeButtons = document.querySelectorAll(".close-btn");
+// Get nav overlay
+const navOverlay = document.getElementById("mobile-nav-overlay");
+// Get nav options
+const navOptions = document.querySelectorAll(".nav-options a");
+
+menuButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setOverlayStyles(navOverlay);
+    toggleBodyScroll();
+  });
+});
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setOverlayStyles(navOverlay);
+    toggleBodyScroll();
+  });
+});
+navOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    setOverlayStyles(navOverlay);
+    toggleBodyScroll();
+  });
+});
