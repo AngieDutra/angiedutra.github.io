@@ -3,176 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        * {
-          @apply scroll-smooth text-black dark:text-white;
-        }
-
-        body {
-          @apply bg-white dark:bg-[#03080c];
-        }
-
-        h1 {
-          @apply text-2xl;
-        }
-
-        h2 {
-          @apply text-xl border-b border-b-black dark:border-b-gray-700 py-2 mb-5;
-        }
-
-        header {
-          @apply fixed w-full flex justify-center items-center bg-white dark:bg-[#03080c];
-        }
-
-        nav#desktop-nav {
-          @apply hidden lg:flex justify-between w-full border-2 border-black dark:border-gray-700;
-          /* Nav classes */
-          .nav-options {
-            @apply flex;
-          }
-          .nav-labels {
-            @apply flex w-full;
-          }
-          .nav-title {
-            @apply px-5 py-2;
-          }
-          .nav-logo {
-            @apply border-r-2 border-r-black dark:border-r-gray-700 px-5 py-2;
-          }
-          .nav-options a {
-            @apply border-l-2 border-l-black dark:border-l-gray-700 py-2;
-          }
-          .nav-options a li {
-            @apply flex items-center h-full px-5;
-          }
-          .mode-toggle {
-            @apply w-10 flex justify-center items-center border-l-2 border-l-black dark:border-l-gray-700 bg-zinc-300 dark:bg-gray-900;
-            img {
-              @apply w-5 h-auto;
-            }
-          }
-        }
-        nav#mobile-nav {
-          @apply w-full flex justify-between border-y-2 border-y-black dark:border-y-white dark:border-y-gray-700 bg-white dark:bg-[#03080c] lg:hidden;
-          .nav-labels {
-            @apply flex;
-          }
-          .nav-logo {
-            @apply border-black dark:border-gray-700  p-3;
-          }
-          .hamburger-btn {
-            @apply border-black dark:border-gray-700 border-l-2 p-3;
-          }
-          #mobile-nav-overlay {
-            @apply absolute top-0 left-0 p-4 md:p-10 w-screen h-screen bg-white dark:bg-[#03080c] flex-col lg:hidden;
-            .close-btn {
-              @apply absolute top-8 right-7 md:top-14 md:right-14;
-            }
-            .nav-container {
-              @apply w-full h-full border-2 border-black dark:border-gray-700 flex flex-col;
-            }
-            .nav-title {
-              @apply w-full border-b-2 border-b-black dark:border-b-gray-700 py-3 px-5 md:text-xl;
-            }
-            .nav-options {
-              @apply flex flex-col gap-4 my-6 md:text-lg;
-            }
-            li {
-              @apply mx-5 px-5 py-2 border border-black dark:border-gray-700;
-            }
-            .mode-toggle {
-              @apply flex justify-center items-center bg-zinc-300 dark:bg-gray-900;
-              img {
-                @apply w-5 h-auto;
-              }
-            }
-          }
-        }
-
-        section {
-          @apply my-8 scroll-m-14 lg:scroll-m-5;
-        }
-
-        /* Section ids */
-        #profile {
-          @apply min-h-7 pt-8 !mt-0;
-          .inner-container {
-            @apply flex flex-col md:flex-row items-center gap-10 mt-14 lg:my-20;
-          }
-        }
-
-        /* Content classes */
-        .inner-container {
-          @apply max-w-2xl lg:max-w-3xl mx-auto px-5;
-        }
-
-        .experience-list {
-          @apply flex flex-col gap-4;
-          li {
-            @apply flex flex-col gap-1;
-          }
-          li > div:first-of-type {
-            @apply font-bold text-lg;
-          }
-          .experience-detail-content > div:first-of-type {
-            @apply leading-snug lg:leading-normal;
-          }
-          .experience-project {
-            @apply border border-black dark:border-gray-700 py-3 px-4 lg:px-5 my-3;
-          }
-          .experience-project > div:first-of-type {
-            @apply font-semibold leading-tight lg:leading-normal flex justify-between gap-5;
-          }
-          .experience-drop-info {
-            @apply pt-2 border-t border-t-black dark:border-t-gray-700 mt-3;
-          }
-          .experience-dev-stack {
-            @apply mt-2 text-gray-500;
-          }
-        }
-
-        .tools-container {
-          @apply flex flex-col gap-3;
-          .tool-section {
-            @apply px-4 py-2 border border-black dark:border-gray-700;
-            .tools-list {
-              @apply grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-x-2.5 gap-y-3 py-2;
-            }
-            .tools-list li {
-              @apply border border-black dark:border-gray-700 flex justify-center py-1;
-            }
-            div:first-of-type {
-              @apply text-gray-500;
-            }
-          }
-        }
-
-        .education-label {
-          @apply font-bold;
-        }
-        .education-list {
-          @apply flex flex-col gap-3;
-        }
-
-        .contact-details {
-          @apply flex gap-3 flex-col md:flex-row;
-          .contact {
-            @apply flex items-center gap-2 border border-black dark:border-gray-700 p-2;
-            img {
-              @apply w-auto h-5;
-            }
-            img:first-of-type {
-              @apply block dark:hidden;
-            }
-            img:last-of-type {
-              @apply hidden dark:block;
-            }
-          }
-        }
-      }
-    </style>
+    <link href="./dist/output.css" rel="stylesheet" />
     <title>Angelica Dutra</title>
   </head>
   <body>
@@ -191,12 +22,12 @@
           <a href="#contact"><li>Contact</li></a>
           <li class="mode-toggle">
             <img
-              class="light hidden dark:inline"
+              class="hidden dark:inline"
               src="./images/mode-light.svg"
               alt="light icon"
             />
             <img
-              class="dark dark:hidden"
+              class="inline dark:hidden"
               src="./images/mode-dark.svg"
               alt="light icon"
             />
@@ -206,9 +37,11 @@
       <nav id="mobile-nav">
         <div class="nav-labels">
           <a href="#"><div class="nav-logo">A</div></a>
-          <div class="border-black dark:border-gray-700 border-l-2 p-3">
-            Angelica Dutra
-          </div>
+          <a href="#" class="flex-grow">
+            <div class="border-black dark:border-gray-700 border-l-2 p-3">
+              Angelica Dutra
+            </div>
+          </a>
         </div>
         <img
           class="hamburger-btn block dark:hidden"
@@ -234,19 +67,19 @@
           <div class="nav-container">
             <div class="nav-title">Angelica Dutra</div>
             <ul class="nav-options">
-              <a href="#"><li>Home</li></a>
+              <a href="#"><li>Profile</li></a>
               <a href="#experience"><li>Experience</li></a>
               <a href="#tools"><li>Tools</li></a>
               <a href="#education"><li>Education</li></a>
               <a href="#contact"><li>Contact</li></a>
               <li class="mode-toggle">
                 <img
-                  class="light hidden dark:inline"
+                  class="hidden dark:inline"
                   src="./images/mode-light.svg"
                   alt="light icon"
                 />
                 <img
-                  class="dark dark:hidden"
+                  class="inline dark:hidden"
                   src="./images/mode-dark.svg"
                   alt="light icon"
                 />
@@ -306,26 +139,26 @@
                       <div>Web for oncology hospital management system</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -354,26 +187,26 @@
                       <div>Web for a pharmaceutical brand</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -399,26 +232,26 @@
                       <div>Web for minor league soccer management system</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -444,26 +277,26 @@
                       <div>Web3 Platforms for various Clients</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -493,26 +326,26 @@
                       <div>Web3 Roulette Game</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -541,26 +374,26 @@
                       <div>Google Chrome Wallet Extension</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -599,26 +432,26 @@
                       <div>3D Game – Unity</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -647,26 +480,26 @@
                       <div>2D Game – Unity</div>
                       <div class="dark:hidden">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
-                      <div class="hidden dark:inline">
+                      <div class="hidden dark:block">
                         <img
-                          class="show w-5 h-auto"
+                          class="show min-w-5 w-5 h-auto"
                           src="./images/show-circle-light.svg"
-                          alt="open dropdown"
+                          alt="open collapsible info"
                         />
                         <img
-                          class="hide hidden w-5 h-auto"
+                          class="hide hidden min-w-5 w-5 h-auto"
                           src="./images/hide-circle-light.svg"
-                          alt="close dropdown"
+                          alt="close collapsible info"
                         />
                       </div>
                     </div>
@@ -855,7 +688,7 @@
       </section>
     </main>
     <script src="./scripts/hamburger.js"></script>
-    <script src="./scripts/toggleElements.js"></script>
+    <script src="./scripts/collapseExperience.js"></script>
     <script src="./scripts/colorModeToggle.js"></script>
   </body>
 </html>
