@@ -7,7 +7,8 @@ const setOverlayStyles = (overlay) => {
 const toggleBodyScroll = () => {
   const body = document.querySelector("body");
   const isNavOpen = navOverlay.classList.contains("flex");
-  if (isNavOpen) {
+  const isNotDesktop = window.matchMedia("(max-width: 1024px)").matches;
+  if (isNavOpen && isNotDesktop) {
     body.style.overflow = "hidden";
   } else {
     body.style.overflow = "visible";
@@ -40,3 +41,6 @@ navOptions.forEach((option) => {
     toggleBodyScroll();
   });
 });
+
+// Add event listener for window resize
+window.addEventListener("resize", toggleBodyScroll);
