@@ -1049,7 +1049,7 @@ section {
 
 @media (min-width: 1024px) {
   section {
-    scroll-margin: 1.25rem;
+    scroll-margin: 3.5rem;
   }
 }
 
